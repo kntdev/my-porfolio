@@ -7,19 +7,21 @@ body{
 
 header{
     height: 100vh;
-    background: linear-gradient(rgba(0,0,0,1), rgba(0,0,0,0.4)),url(https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-color: rgba(0, 0, 0, 0.633);
-    padding-bottom: 60px;
-
+    position: relative;
 }
 
 nav{
     position: sticky;
     top: 0;
 }
-
+.bg{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    z-index: -1;
+    filter: brightness(35%);
+}
 .perfil{
     height: 250px;
     width: 250px;
@@ -33,7 +35,7 @@ nav{
     flex-wrap: wrap;
     justify-content: center;
     list-style: none;
-    background-color: rgba(255, 255, 255, 0.4);
+    background-color: rgb(175, 175, 175);
     padding: 7px;
 }
 .item{
@@ -43,9 +45,13 @@ nav{
     padding: 10px;
     transition: 300ms ease-out background-color;
     cursor: pointer;
-    background: rgb(191, 191, 191);
+    background: rgb(235, 235, 235);
     color: rgb(32, 32, 32);
     border-radius: 10px;
+}
+.item a{
+    text-decoration: none;
+    color: unset;
 }
 .item:hover{
     background-color: #fff;
@@ -62,10 +68,9 @@ nav{
     color: #fff;
     font-size: 20px;
     font-weight: 200;
-    min-width: 320px;
 }
 .logo{
-    font-size: 50px;
+    font-size: 2.2em;
     margin: 20px;
 }
 
@@ -139,12 +144,14 @@ nav{
 .container-slider{
     width: 50%;
     max-width: 900px;
-    min-width: 320px;
+    min-width: 280px;
     overflow: hidden;
     box-shadow: 0 0 0 7px #fff,
                 0 15px 50px;
     position: relative;
     margin-bottom: 40px;
+    margin-right: 20px;
+    margin: auto;
 }
 .slider{
     display: flex;
@@ -211,6 +218,7 @@ nav{
 }
 .text-proyect{
     width: 400px;
+    min-width: 200px;
     margin-inline: 20px;
     background-color: #e7e7e7e2;
     padding: 15px;
@@ -304,7 +312,7 @@ nav{
 
 footer{
     height: 100vh;
-    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,1)),url(https://images.unsplash.com/photo-1526649661456-89c7ed4d00b8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1310&q=80);
+    position: relative;
 }
 footer nav{
     position: sticky;
@@ -319,10 +327,10 @@ footer h3{
 
 .contenedor-form{
     background-color: #fff;
-    width: 90%;
+    width: 60%;
     margin: auto;
     max-width: 400px;
-    min-width: 300px;
+    min-width: 240px;
     border-radius: 1em;
     padding: 3.5em 1.5em;
     margin-bottom: 34px;
@@ -354,9 +362,11 @@ footer h3{
     padding: .7em 0;
     border-radius: .2em;
     cursor: pointer;
+    transition: 300ms ease-out background-color;
 }
 .btn-form:hover{
     background-color: rgb(89, 198, 212);
+    transition: 300ms ease-out background-color;
 }
 /*/////////////////////////////*/
 
@@ -370,3 +380,15 @@ input::-webkit-inner-spin-button {
 input[type=number] {
   -moz-appearance: textfield;
 }
+
+/*//////////////////////////////////*/
+
+@media only screen and (max-width: 650px) {
+    .item a{
+        font-size: 16px;
+    }
+  }
+
+@media only screen and (max-width: 545px) {
+
+  }

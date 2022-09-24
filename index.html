@@ -18,14 +18,18 @@
 
 <body>
     <header>
+        <img class="bg bg-header" src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80" alt="bgHeader">
+
         <nav>
             <ul class="items">
-                <li class="item">SOBRE MI</li>
-                <li class="item">MIS PROYECTOS</li>
-                <li class="item">MIS SKILLSETS</li>
-                <li class="item">CONTACTO</li>
+                <li class="item"><a href="#info">SOBRE MI</a></li>
+                <li class="item"><a href="#proyectos">MIS PROYECTOS</a></li>
+                <li class="item"><a href="#skillset">MIS SKILLSETS</a></li>
+                <li class="item"><a href="#contacto">CONTACTO</a></li>
             </ul>
         </nav>
+
+
 
         <div class="header-info">
             <span class="logo">< KNTDEV /></span>
@@ -35,7 +39,7 @@
     </header>
     <main>
         <section class="sect-sobre-mi">
-            <h3 class="titulo">SOBRE MI <i class="fa-regular fa-circle-user"></i></h3>
+            <h3 id="info" class="titulo">SOBRE MI <i class="fa-regular fa-circle-user"></i></h3>
 
             <div class="container-info">
                 <div class="container-slider">
@@ -74,7 +78,7 @@
             </div>
         </section>
         <section class="sect-mis-proyectos">
-            <h3 class="titulo">MIS PROYECTOS <i class="fa-solid fa-laptop-code"></i></h3>
+            <h3 id="proyectos" class="titulo">MIS PROYECTOS <i class="fa-solid fa-laptop-code"></i></h3>
             <div class="container-proyectos">
                 <div class="proyect container-pescadito">
                     <img class="img-proyect" src="./assets/img-proyects/logo-pescadito.png" alt="">
@@ -101,7 +105,7 @@
             </div>
         </section>
         <section class="sect-mi-skill">
-            <h3 class="titulo">
+            <h3 id="skillset" class="titulo">
                 MIS SKILLSETS <i class="fa-solid fa-bolt"></i>
             </h3>
 
@@ -138,7 +142,9 @@
         </section>
     </main>
     <footer>
-        <h3 class="titulo">
+        <img class="bg" src="https://images.unsplash.com/uploads/141103282695035fa1380/95cdfeef?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1430&q=80" alt="">
+
+        <h3 id="contacto" class="titulo">
             CONTACTO <i class="fa-regular fa-message"></i>
         </h3>
         <div class="contenedor-form">
@@ -153,12 +159,13 @@
         </div>
         <nav>
             <ul class="items">
-                <li class="item">SOBRE MI</li>
-                <li class="item">MIS PROYECTOS</li>
-                <li class="item">MIS SKILLSETS</li>
-                <li class="item">CONTACTO</li>
+                <li class="item"><a href="#info">SOBRE MI</a></li>
+                <li class="item"><a href="#proyectos">MIS PROYECTOS</a></li>
+                <li class="item"><a href="#skillset">MIS SKILLSETS</a></li>
+                <li class="item"><a href="#contacto">CONTACTO</a></li>
             </ul>
         </nav>
+
     </footer>
 
     <script src="./js/app.js"></script>
