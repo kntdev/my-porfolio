@@ -291,6 +291,10 @@ nav{
     background-color: #fed330;
     color: #443603;
 }
+.typescript{
+    color: #2d79c7;
+    background-color: #aecaf7;
+}
 .react{
     background-color: #4bcffa;
     color: #105182;
@@ -299,17 +303,31 @@ nav{
     background-color: #05c46b;
     color: #014726;
 }
+.mongodb{
+    color: #4caf50;
+    background-color: #b0ffb4;
+}
+.mysql{
+    color: #3765af;
+    background-color: #96beff;
+}
 .tailwind{
     background-color: #aae4f3;
     color: #01b7d6;
 }
-.tailwind-img{
-    width: 70px;
+.bootstrap{
+    color: #7109f5;
+    background-color: #d6b7ff;
+}
+.icons-img{
+    width: 60px;
+    height: 60px;
 }
 .git{
     background-color: #EE5A24;
     color: #41190a;
 }
+
 /*////////////////////////////*/
 
 footer{
