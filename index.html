@@ -11,9 +11,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;700&display=swap" rel="stylesheet">
 
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <link rel="stylesheet" href="./css/all.min.css">
     <link rel="stylesheet" href="./css-code/normalize.css">
     <link rel="stylesheet" href="./css-code/style.css">
+
     
 </head>
 
@@ -21,7 +24,7 @@
     <header>
         <img class="bg bg-header" src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80" alt="bgHeader">
 
-        <nav>
+        <nav class="navbar">
             <ul class="items">
                 <li class="item"><a href="#info">SOBRE MI</a></li>
                 <li class="item"><a href="#proyectos">MIS PROYECTOS</a></li>
@@ -81,7 +84,7 @@
         <section class="sect-mis-proyectos">
             <h3 id="proyectos" class="titulo">MIS PROYECTOS <i class="fa-solid fa-laptop-code"></i></h3>
             <div class="container-proyectos">
-                <div class="proyect container-pescadito">
+                <div data-aos="fade-right" class="proyect container-pescadito">
                     <img class="img-proyect" src="./assets/img-proyects/logo-pescadito.png" alt="">
                     <div class="text-proyect">
                         <h4>Pescadito Menú</h4>
@@ -89,14 +92,14 @@
                         <a href="https://pescaditocdm.com.ar/" target="_blank">Link</a>
                     </div>
                 </div>
-                <div class="proyect container-pomodoro"><img class="img-proyect" src="./assets/img-proyects/pomodoro.png" alt="">
+                <div data-aos="fade-left" class="proyect container-pomodoro"><img class="img-proyect" src="./assets/img-proyects/pomodoro.png" alt="">
                     <div class="text-proyect">
                         <h4>Pomodoro APP</h4>
                         <p>App con reloj programado como el metodo pomodoro. Tiene una mini app para agregar tareas, hecho con HTML-CSS-JAVASCRIPT</p>
                         <a href="https://leafy-elf-927ab1.netlify.app/" target="_blank">Link</a>
                     </div>
                 </div>
-                <div class="proyect container-react"><img class="img-proyect" src="https://elevatecnologia.com/wp-content/uploads/2020/12/Beneficios-de-React-JS-y-por-que-deberia-combinarlo-con.png" alt="">
+                <div data-aos="fade-right" class="proyect container-react"><img class="img-proyect" src="https://elevatecnologia.com/wp-content/uploads/2020/12/Beneficios-de-React-JS-y-por-que-deberia-combinarlo-con.png" alt="">
                     <div class="text-proyect">
                         <h4>React APP</h4>
                         <p>...En proceso 😅​</p>
@@ -186,7 +189,7 @@
             </div>
         </div>
 
-        <nav>
+        <nav class="navfooter">
             <ul class="items">
                 <li class="item"><a href="#info">SOBRE MI</a></li>
                 <li class="item"><a href="#proyectos">MIS PROYECTOS</a></li>
@@ -198,6 +201,10 @@
     </footer>
 
     <script src="./js/app.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>
