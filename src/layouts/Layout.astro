@@ -1,0 +1,209 @@
+---
+export interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+
+
+---
+
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/workplace.png" />
+		<meta name="generator" content={Astro.generator} />
+		<script src="https://kit.fontawesome.com/09d68e256a.js" crossorigin="anonymous"></script>
+		<title>{title}</title>
+	</head>
+	<body>
+		<header>
+			<a href="#" class="logo">
+				<h1>< KNTDEV /></h1>
+			</a>
+			<ul class="items" id="items">
+				<li><a class="item" href="#sobremi">SOBRE MI</a></li>
+				<!-- <li><a class="item" href="#servicios">SERVICIOS</a></li> -->
+				<li><a class="item" href="#proyectos">PROYECTOS</a></li>
+				<li><a class="item" href="#habilidades">HABILIDADES</a></li>
+				<!-- <li><a class="item" href="#"><span class="btn-text">MENÚ</span><i class="fa-solid fa-house"></i></a></li> -->
+				<li><a class="item" href="#contacto"><span class="btn-text">CONTACTO</span><i class="fa-solid fa-envelope"></i></a></li>
+			</ul>
+			<button class="btn-menu" id="boton"><i class="fa-solid fa-bars"></i></button>
+		</header>
+		<slot />
+
+
+
+	</body>
+
+	<script>
+		const boton = document.getElementById('boton');
+		let items = document.getElementById('items')
+
+		boton.addEventListener('click',()=>{
+			items.classList.toggle("visible");
+		})
+	</script>
+</html>
+
+<style is:global>
+
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text&family=Manrope:wght@400;500;700&family=Martel:wght@700&display=swap');
+
+
+	:root {
+		--main-bg-color: #007d99;
+		--main-content-color: #2b61a1;
+		--secondary-content-color: #001e2a;
+		--primary-gradient: linear-gradient(0deg, rgba(0,20,43,1) 30%, rgba(43,97,161,1) 100%);
+		--secondary-gradient: linear-gradient(0deg, rgba(0,30,42,1) 0%, rgba(0,73,102,1) 100%);
+	}
+	* {
+		padding: 0;
+		margin: 0;
+        font-family: 'Manrope', sans-serif;
+		box-sizing: border-box;
+	}
+	html {
+		font-family: 'Manrope', sans-serif;
+		background-color: #F6F6F6;
+		scroll-behavior: smooth;
+		/* overflow: hidden; */
+	}
+	header{
+		background-color: var(--main-bg-color);
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+		padding: 15px 20px;
+		position: sticky;
+		top: 0;
+		left: 0;
+		z-index: 100000000;
+		/* overflow: hidden; */
+	}
+	.items{
+		display: flex;
+		gap: 15px;
+		align-items: center;
+	}
+	.items li{
+		list-style: none;
+	}
+	.items li:nth-child(5){
+		margin-left: 15px;
+		margin-right: 5px;
+	}
+	a{
+		text-decoration: none;
+		color: #fff;
+	}
+	i{
+		font-size: 1.3em;
+	}
+	/* .items li a:active{
+		font-weight: bold;
+		background-color: #fff; 
+	} */
+	footer{
+		background-color: var(--secondary-content-color);
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		padding: 30px;
+		gap: 20px;
+		align-items: center;
+    	justify-items: center;
+	}
+	.info_p{
+		color: #878787;
+	}
+	.certificado_img{
+		width: 200px;
+	}
+	.links{
+		display: grid;
+		text-align: center;
+		margin-top: 30px;
+	}
+	.btn-menu{
+		display: none;
+		padding: 8px 10px;
+		font-size: 1.1em;
+		border-radius: 50%;
+		border: none;
+		background-color: #fff;
+		color: #006ea8;
+	}
+	.btn-text{
+		display: none;
+		position: relative;
+		/* bottom: 23px; */
+		/* left: 10px; */
+		color: #fff;
+		/* cursor: pointer; */
+		margin-right: 7px;
+	}
+	@media only screen and (max-width: 730px) {
+	header{
+		justify-content: space-between;
+	}
+	li:nth-child(5){
+		margin-left: 0px;
+	}
+	.btn-menu{
+		display: block;
+	}
+
+	/* .items{
+		display: flex;
+	}
+	.items.visible{
+		display: flex;
+		flex-direction: column;
+		position: absolute;
+		top: 76px;
+		right: 0;
+		width: 80%;
+		background-color: var(--secondary-content-color);
+		height: 350px;
+		z-index: 100;
+		padding: 10px;
+	} */
+	.items{
+		display: flex;
+		flex-direction: column;
+		position: absolute;
+		top: 73px;
+		left: 0;
+		width: 35%;
+		background-color: var(--secondary-content-color);
+		height: 350px;
+		z-index: 100;
+		padding: 10px;
+		transform: translateX(-240px);
+		transition: 1000ms ease transform;
+	}
+	.items.visible{
+		transform: translateX(0px);
+		transition: 1000ms ease transform;
+	}
+	.btn-text{
+		display: inline-block;
+	}
+	.items li{
+		display: inline-block;
+		width: 100%;
+		height: 100%;
+		padding: 10px;
+	}
+	.items li a{
+		display: block;
+	}
+	.info{
+		text-align: center;
+	}
+}
+</style>

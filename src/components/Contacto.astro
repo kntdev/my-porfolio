@@ -1,0 +1,132 @@
+<section id="contacto">
+    <img class="bg" src="https://images.unsplash.com/uploads/141103282695035fa1380/95cdfeef?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1430&q=80" alt="">
+
+        <h3 id="contacto" class="titulo">
+            CONTACTO <i class="fa-regular fa-message"></i>
+        </h3>
+        <div class="contenedor-form">
+            <form class="formulario" action="https://formspree.io/f/mqkjqqgv"
+            method="POST">
+                <input class="form-input" type="text" placeholder="Nombre:" name="name" required>
+                <input class="form-input" type="email" placeholder="Email:" name="email" required>
+                <input class="form-input" type="number" placeholder="Telefono:" name="phone">
+                <textarea class="form-input form-input-msg" placeholder="Mensaje:" name="message" required></textarea>
+                <input class="btn-form" type="submit" value="Enviar">
+            </form>
+        </div>
+        <div class="contact-boxes">
+            <div class="conct-box">
+                <a class="btn-box" href="https://www.linkedin.com/in/santiago-rodriguez-5a2b18224" target="_blank"><i class="fa-brands fa-linkedin"></i><p>LinkedIn</p></a>
+            </div>
+            <div class="conct-box">
+                <a class="btn-box" href="https://github.com/kntdev" target="_blank"><i class="fa-brands fa-github"></i><p>GitHub</p></a>
+            </div>
+        </div>
+</section>
+
+<style>
+    section{
+        position: relative;
+        padding-bottom: 60px;
+    }
+
+    .titulo{
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 80px;
+    margin-bottom: 60px;
+    color: #fff;
+    }
+
+    .bg{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    z-index: -1;
+    filter: brightness(35%);
+}
+.contenedor-form{
+    background-color: #fff;
+    width: 60%;
+    margin: auto;
+    max-width: 400px;
+    min-width: 240px;
+    border-radius: 1em;
+    padding: 3.5em 1.5em;
+    margin-bottom: 34px;
+}
+.formulario{
+    width: 100%;
+    display: grid;
+    gap: 1em;
+    grid-auto-columns: 100%;
+}
+.form-input{
+    font-size: 1rem;
+    padding: .8em 1em;
+    outline: none;
+    border: 1px solid #bbb0b0;
+    border-radius: 0.2em;
+}
+.form-input-msg{
+    resize: none;
+    padding: 1.8em 1em;
+    margin-bottom: .5em;
+}
+.btn-form{
+    font-size: 1rem;
+    background-color: #089;
+    color: #fff;
+    border: none;
+    font-weight: 800;
+    padding: .7em 0;
+    border-radius: .2em;
+    cursor: pointer;
+    transition: 300ms ease-out background-color;
+}
+.btn-form:hover{
+    background-color: rgb(89, 198, 212);
+    transition: 300ms ease-out background-color;
+}
+/*/////////////////////////////*/
+
+.contact-boxes{
+    background-color: rgb(0, 125, 153);
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 350px;
+    width: 60%;
+    justify-content: center;
+    /* align-items: center; */
+    padding: 20px;
+    border-radius: 15px;
+    margin: auto;
+    gap: 20px;
+
+}
+.conct-box{
+    font-size: 20px;
+    background-color: #e1e1e1;
+    transition: 300ms ease-out background-color;
+    padding: 6px;
+}
+.conct-box:hover{
+    background-color: #ffffff;
+    transition: 300ms ease-out background-color;
+}
+.btn-box{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    color: rgb(0, 125, 153);
+    text-decoration: none;
+}
+.btn-box i{
+    font-size: 30px;
+}
+</style>
